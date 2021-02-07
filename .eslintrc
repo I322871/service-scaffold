@@ -6,7 +6,13 @@
   },
   "extends": "eslint:recommended",
   "globals": {
-      "test": "readonly"
+      "jasmine": "readonly",
+      "beforeAll": "readonly",
+      "afterAll": "readonly",
+      "afterEach": "readonly",
+      "it": "readonly",
+      "describe": "readonly",
+      "expect": "readonly"
   },
   "parser": "babel-eslint",
   "parserOptions": {

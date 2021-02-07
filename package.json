@@ -8,7 +8,7 @@
   "scripts": {
     "start": "node .",
     "dev": "nodemon -i \"*.test.js\" .",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "coverage": "npm test -- --coverage",
     "lint": "eslint **/*.js"
   },
@@ -19,10 +19,19 @@
   ],
   "author": "I322871",
   "license": "ISC",
+  "jest": {
+    "testEnvironment": "node",
+    "setupFilesAfterEnv": [
+      "<rootDir>/test/setup.js"
+    ]
+  },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "dotenv": "^8.2.0",
     "eslint": "^7.19.0",
+    "jest": "^26.6.3",
+    "mongodb-memory-server": "^6.9.3",
+    "nock": "^13.0.7",
     "nodemon": "^2.0.7"
   },
   "dependencies": {

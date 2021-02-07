@@ -21,7 +21,7 @@ export const password = function () {
             passport.authenticate("password", { session: false }, (err, { givenEmail, givenPassword }) => {
                 User.byTenant(tenant)
                     .findOne({ email: givenEmail })
-                    .then((user) => {
+                    .then(user => {
                         if (!user) {
                             error(res, 401, "The given email or password are not valid.");
                             return;
