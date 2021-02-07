@@ -26,7 +26,7 @@ const config = {
         port: process.env.PORT || 8080,
         ip: process.env.IP || "localhost",
         apiRoot: process.env.API_ROOT || "",
-        defaultEmail: "cong.wang@sap.com",
+        defaultEmail: "no-reply@service-scaffold.com",
         sendgridKey: getProcessEnvValue("SENDGRID_KEY"),
         masterKey: getProcessEnvValue("MASTER_KEY"),
         jwtSecret: getProcessEnvValue("JWT_SECRET"),
