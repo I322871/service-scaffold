@@ -12,6 +12,7 @@
       "afterEach": "readonly",
       "it": "readonly",
       "describe": "readonly",
+      "beforeEach": "readonly",
       "expect": "readonly"
   },
   "parser": "babel-eslint",

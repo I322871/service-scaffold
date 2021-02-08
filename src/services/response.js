@@ -2,6 +2,8 @@ export const success = function (res, status) {
     return function (entity) {
         if (entity) {
             res.status(status || 200).json(entity);
+        } else {
+            res.status(status || 200).end();
         }
     };
 };
@@ -22,7 +24,7 @@ export const authorOrAdmin = function (res, user, userField) {
     return function (entity) {
         if (entity) {
             const isAdmin = user.role === "admin";
-            const isAuthor = entity[userField] && entity[userField].equals(user.id);
+            const isAuthor = entity[userField] && entity[userField] === user.id;
             if (isAuthor || isAdmin) {
                 return entity;
             }

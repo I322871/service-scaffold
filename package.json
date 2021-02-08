@@ -20,10 +20,11 @@
   "author": "I322871",
   "license": "ISC",
   "jest": {
-    "testEnvironment": "node",
+    "testEnvironment": "jest-environment-node",
     "setupFilesAfterEnv": [
       "<rootDir>/test/setup.js"
-    ]
+    ],
+    "transform": {}
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
