@@ -1,22 +1,22 @@
-import Promise from "bluebird";
-import mongoose from "mongoose";
-import config from "../config.js";
+import Promise from 'bluebird'
+import mongoose from 'mongoose'
+import config from '../config.js'
 
-const { mongo } = config;
+const { mongo } = config
 
 Object.keys(mongo.options || { }).forEach(key => {
-    mongoose.set(key, mongo.options[key]);
-});
+  mongoose.set(key, mongo.options[key])
+})
 
-mongoose.Promise = Promise;
+mongoose.Promise = Promise
 
 mongoose.Types.ObjectId.prototype.view = function () {
-    return { id: this.toString() };
-};
+  return { id: this.toString() }
+}
 
-mongoose.connection.on("error", err => {
-    console.error(`MongoDB connection error: ${err}`);
-    process.exit(-1);
-});
+mongoose.connection.on('error', err => {
+  console.error(`MongoDB connection error: ${err}`)
+  process.exit(-1)
+})
 
-export default mongoose;
+export default mongoose

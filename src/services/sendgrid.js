@@ -1,15 +1,15 @@
-import sendgridMail from "@sendgrid/mail";
-import config from "../config.js";
+import sendgridMail from '@sendgrid/mail'
+import config from '../config.js'
 
-const { sendgridKey, defaultEmail } = config;
+const { sendgridKey, defaultEmail } = config
 
-sendgridMail.setApiKey(sendgridKey);
+sendgridMail.setApiKey(sendgridKey)
 
 export const sendMail = function (toEmail, subject, content, fromEmail = defaultEmail) {
-    return sendgridMail.send({
-        to: toEmail,
-        from: fromEmail,
-        subject,
-        html: content
-    });
-};
+  return sendgridMail.send({
+    to: toEmail,
+    from: fromEmail,
+    subject,
+    html: content
+  })
+}

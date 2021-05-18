@@ -24,7 +24,7 @@
       // Use 4 spaces as indent.
       "indent": [
           "error",
-          4
+          2
       ],
       // Unix style line break is required.
       "linebreak-style": [
@@ -34,12 +34,12 @@
       // Should only use double quote.
       "quotes": [
           "error",
-          "double"
+          "single"
       ],
       // Semicolon is required.
       "semi": [
           "error",
-          "always"
+          "never"
       ],
       // == is not allowed.
       "eqeqeq": "error",

@@ -1,19 +1,19 @@
-import express from "express";
-import { create, show, update } from "./controller.js";
-import { parseTenant } from "../../services/util.js";
+import express from 'express'
+import { create, show, update } from './controller.js'
+import { parseTenant } from '../../services/util.js'
 
-const router = new express.Router();
+const router = new express.Router()
 
-router.post("/",
-    parseTenant,
-    create);
+router.post('/',
+  parseTenant,
+  create)
 
-router.get("/:token",
-    parseTenant,
-    show);
+router.get('/:token',
+  parseTenant,
+  show)
 
-router.put("/:token",
-    parseTenant,
-    update);
+router.put('/:token',
+  parseTenant,
+  update)
 
-export default router;
+export default router
