@@ -9,6 +9,7 @@ export const login = function ({ user }, res, next) {
         sameSite: 'lax',
         secure: false
       })
+
       return { token, user: user.view(true) }
     })
     .then(success(res, 201))
